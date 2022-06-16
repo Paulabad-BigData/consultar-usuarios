@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Empleados</title>
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h3 class="text-white">Gestionar Empleados</h3>
+            </div>
+            <div class="card-body">
+                <input type="hidden" name="idUsuario" id="idUsuario">
+                <div class="row">
+                    <div class="btn-group-sm">
+                        <button class="btn btn-outline-primary" onclick="Consultar();"> Consultar</button>
+                        <button class="btn btn-outline-primary" onclick="Guardar();"> Guardar</button>
+                        <button class="btn btn-outline-primary" onclick="Modificar();"> Modificar</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nombres">Nombres</label>
+                        <input type="text" name="nombres" id="nombres" class="form-control" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nombres">Apellidos</label>
+                        <input type="text" name="apellidos" id="apellidos" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono" class="form-control" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dirección">Dirección</label>
+                        <input type="text" name="direccion" id="direccion" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="cargo">Cargo</label>
+                        <select name="cargo" id="cargo" class="form-control">
+                            <option>Gerente</option>
+                            <option>Ingeniero</option>
+                            <option>Contador</option>
+                            <option>Auditor</option>
+                            <option>Desarrollador</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="estado">Estado</label>
+                        <input type="number" name="direccion" id="direccion" class="form-control" autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Telefono</th>
+                            <th>Dirección</th>
+                            <th>Cargo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datos">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="../js/usuario.js"></script>
+</html>
